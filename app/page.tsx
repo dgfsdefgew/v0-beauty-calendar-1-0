@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
+import Image from "next/image"
 
 export default function SplashScreen() {
   const router = useRouter()
-  const [isLoading, setIsLoading] = useState(true)
   const [fadeOut, setFadeOut] = useState(false)
 
   useEffect(() => {
@@ -21,33 +21,34 @@ export default function SplashScreen() {
 
   return (
     <div
-      className={`min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-background via-muted to-background transition-opacity duration-500 ${fadeOut ? "opacity-0" : "opacity-100"}`}
+      className={`min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-background via-accent/10 to-background transition-opacity duration-500 relative overflow-hidden ${fadeOut ? "opacity-0" : "opacity-100"}`}
     >
-      <div className="relative">
-        {/* Logo Animation */}
-        <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center backdrop-blur-sm border border-primary/30 shadow-2xl animate-pulse">
-          <svg className="w-16 h-16 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.5}
-              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-        </div>
-
-        {/* Glow Effect */}
-        <div className="absolute inset-0 w-32 h-32 rounded-full bg-primary/20 blur-2xl animate-pulse" />
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-primary/20 blur-3xl animate-pulse" />
+        <div
+          className="absolute bottom-20 right-20 w-60 h-60 rounded-full bg-secondary/20 blur-3xl animate-pulse"
+          style={{ animationDelay: "1s" }}
+        />
       </div>
 
-      <h1 className="mt-8 text-4xl font-bold text-foreground tracking-tight">Beauty Calendar</h1>
+      <div className="relative z-10 flex flex-col items-center">
+        <div className="relative w-80 h-80 mb-8">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/unnamed%20%283%29-zan9vBn5lVY5ckWO9pVVWV9wqXLrfE.jpg"
+            alt="Beauty Calendar 1.0"
+            width={320}
+            height={320}
+            className="rounded-3xl shadow-2xl"
+            priority
+          />
+          <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-background/80 to-transparent" />
+        </div>
 
-      <p className="mt-2 text-muted-foreground text-sm">by Patfer 3D Coding</p>
-
-      <div className="mt-8 flex gap-2">
-        <div className="w-2 h-2 rounded-full bg-primary animate-bounce" style={{ animationDelay: "0ms" }} />
-        <div className="w-2 h-2 rounded-full bg-primary animate-bounce" style={{ animationDelay: "150ms" }} />
-        <div className="w-2 h-2 rounded-full bg-primary animate-bounce" style={{ animationDelay: "300ms" }} />
+        <div className="flex gap-2 mt-8">
+          <div className="w-3 h-3 rounded-full bg-primary animate-bounce" style={{ animationDelay: "0ms" }} />
+          <div className="w-3 h-3 rounded-full bg-secondary animate-bounce" style={{ animationDelay: "150ms" }} />
+          <div className="w-3 h-3 rounded-full bg-accent animate-bounce" style={{ animationDelay: "300ms" }} />
+        </div>
       </div>
     </div>
   )

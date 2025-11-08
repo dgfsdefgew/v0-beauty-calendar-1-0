@@ -3,71 +3,81 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Sci-fi beauty theme with neon cyan, magenta, and dark backgrounds */
 :root {
-  --background: oklch(0.12 0.02 265);
-  --foreground: oklch(0.98 0 0);
-  --card: oklch(0.15 0.03 265);
-  --card-foreground: oklch(0.98 0 0);
-  --popover: oklch(0.15 0.03 265);
-  --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.75 0.25 195);
-  --primary-foreground: oklch(0.12 0.02 265);
-  --secondary: oklch(0.75 0.28 330);
-  --secondary-foreground: oklch(0.12 0.02 265);
-  --muted: oklch(0.25 0.03 265);
-  --muted-foreground: oklch(0.65 0.05 265);
-  --accent: oklch(0.8 0.25 145);
-  --accent-foreground: oklch(0.12 0.02 265);
-  --destructive: oklch(0.65 0.25 25);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.25 0.1 265);
-  --input: oklch(0.2 0.05 265);
-  --ring: oklch(0.75 0.25 195);
-  --chart-1: oklch(0.75 0.25 195);
-  --chart-2: oklch(0.75 0.28 330);
-  --chart-3: oklch(0.8 0.25 145);
-  --chart-4: oklch(0.7 0.22 280);
-  --chart-5: oklch(0.72 0.24 60);
-  --radius: 0.75rem;
-  --sidebar: oklch(0.1 0.02 265);
-  --sidebar-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.75 0.25 195);
-  --sidebar-primary-foreground: oklch(0.12 0.02 265);
-  --sidebar-accent: oklch(0.2 0.05 265);
-  --sidebar-accent-foreground: oklch(0.98 0 0);
-  --sidebar-border: oklch(0.25 0.1 265);
-  --sidebar-ring: oklch(0.75 0.25 195);
-
-  /* Neon glow colors */
-  --neon-cyan: oklch(0.75 0.25 195);
-  --neon-magenta: oklch(0.75 0.28 330);
-  --neon-green: oklch(0.8 0.25 145);
+  /* Light mode - Soft peachy/rose gold aesthetic */
+  --background: oklch(0.98 0.01 30);
+  --foreground: oklch(0.25 0.02 30);
+  --card: oklch(0.96 0.015 30);
+  --card-foreground: oklch(0.25 0.02 30);
+  --popover: oklch(0.99 0.01 30);
+  --popover-foreground: oklch(0.25 0.02 30);
+  --primary: oklch(0.65 0.12 25);
+  --primary-foreground: oklch(0.98 0.01 30);
+  --secondary: oklch(0.75 0.08 40);
+  --secondary-foreground: oklch(0.25 0.02 30);
+  --muted: oklch(0.92 0.015 30);
+  --muted-foreground: oklch(0.5 0.02 30);
+  --accent: oklch(0.85 0.08 35);
+  --accent-foreground: oklch(0.25 0.02 30);
+  --destructive: oklch(0.6 0.2 25);
+  --destructive-foreground: oklch(0.98 0.01 30);
+  --border: oklch(0.88 0.02 30);
+  --input: oklch(0.94 0.015 30);
+  --ring: oklch(0.65 0.12 25);
+  --radius: 1rem;
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
 }
 
 .dark {
-  --background: oklch(0.08 0.02 265);
-  --foreground: oklch(0.98 0 0);
-  --card: oklch(0.12 0.03 265);
-  --card-foreground: oklch(0.98 0 0);
-  --popover: oklch(0.12 0.03 265);
-  --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.75 0.25 195);
-  --primary-foreground: oklch(0.12 0.02 265);
-  --secondary: oklch(0.75 0.28 330);
-  --secondary-foreground: oklch(0.12 0.02 265);
-  --muted: oklch(0.2 0.03 265);
-  --muted-foreground: oklch(0.6 0.05 265);
-  --accent: oklch(0.8 0.25 145);
-  --accent-foreground: oklch(0.12 0.02 265);
-  --destructive: oklch(0.65 0.25 25);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.25 0.1 265);
-  --input: oklch(0.15 0.05 265);
-  --ring: oklch(0.75 0.25 195);
+  /* Dark mode - Deep with rose gold accents */
+  --background: oklch(0.15 0.02 30);
+  --foreground: oklch(0.95 0.01 30);
+  --card: oklch(0.18 0.025 30);
+  --card-foreground: oklch(0.95 0.01 30);
+  --popover: oklch(0.18 0.025 30);
+  --popover-foreground: oklch(0.95 0.01 30);
+  --primary: oklch(0.7 0.12 25);
+  --primary-foreground: oklch(0.15 0.02 30);
+  --secondary: oklch(0.75 0.08 40);
+  --secondary-foreground: oklch(0.15 0.02 30);
+  --muted: oklch(0.25 0.02 30);
+  --muted-foreground: oklch(0.6 0.02 30);
+  --accent: oklch(0.8 0.08 35);
+  --accent-foreground: oklch(0.15 0.02 30);
+  --destructive: oklch(0.6 0.2 25);
+  --destructive-foreground: oklch(0.95 0.01 30);
+  --border: oklch(0.3 0.02 30);
+  --input: oklch(0.22 0.02 30);
+  --ring: oklch(0.7 0.12 25);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
 }
 
 @theme inline {
+  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -111,78 +121,123 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
   }
 }
 
-/* Adding sci-fi visual effects */
+/* Modern beauty visual effects */
 @layer utilities {
-  .neon-glow {
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), 0 0 40px rgba(0, 255, 255, 0.2), 0 0 60px rgba(0, 255, 255, 0.1);
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .neon-glow-magenta {
-    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3), 0 0 40px rgba(255, 0, 255, 0.2), 0 0 60px rgba(255, 0, 255, 0.1);
+  .dark .glass-effect {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
   }
 
-  .neon-glow-green {
-    box-shadow: 0 0 20px rgba(0, 255, 150, 0.3), 0 0 40px rgba(0, 255, 150, 0.2), 0 0 60px rgba(0, 255, 150, 0.1);
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(205, 150, 140, 0.3), 0 0 40px rgba(205, 150, 140, 0.2);
   }
 
-  .holographic {
-    background: linear-gradient(135deg, oklch(0.75 0.25 195) 0%, oklch(0.75 0.28 330) 50%, oklch(0.8 0.25 145) 100%);
-    background-size: 200% 200%;
-    animation: holographic 3s ease infinite;
+  .dark .glow-effect {
+    box-shadow: 0 0 20px rgba(205, 150, 140, 0.4), 0 0 40px rgba(205, 150, 140, 0.3);
   }
 
-  .grid-pattern {
-    background-image: linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 20px 20px;
-  }
-
-  .scan-line {
+  .shimmer {
     position: relative;
     overflow: hidden;
   }
 
-  .scan-line::after {
+  .shimmer::after {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: -100%;
     width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, oklch(0.75 0.25 195), transparent);
-    animation: scan 2s linear infinite;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+  }
+
+  .dark .shimmer::after {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  }
+
+  /* Adding beauty-themed background patterns */
+  .beauty-pattern-light {
+    background-image: radial-gradient(circle at 20% 20%, rgba(205, 150, 140, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(218, 165, 155, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 70%, rgba(230, 180, 170, 0.08) 0%, transparent 50%);
+  }
+
+  .dark .beauty-pattern-light {
+    background-image: radial-gradient(circle at 20% 20%, rgba(205, 150, 140, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(218, 165, 155, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 40% 70%, rgba(230, 180, 170, 0.03) 0%, transparent 50%);
+  }
+
+  .beauty-gradient-overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(205, 150, 140, 0.02) 0%,
+      rgba(218, 165, 155, 0.04) 25%,
+      rgba(230, 180, 170, 0.02) 50%,
+      rgba(205, 150, 140, 0.03) 75%,
+      rgba(218, 165, 155, 0.02) 100%
+    );
+  }
+
+  .dark .beauty-gradient-overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(205, 150, 140, 0.03) 0%,
+      rgba(218, 165, 155, 0.06) 25%,
+      rgba(230, 180, 170, 0.04) 50%,
+      rgba(205, 150, 140, 0.05) 75%,
+      rgba(218, 165, 155, 0.03) 100%
+    );
+  }
+
+  .salon-grid {
+    background-image: linear-gradient(rgba(205, 150, 140, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(205, 150, 140, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .dark .salon-grid {
+    background-image: linear-gradient(rgba(205, 150, 140, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(205, 150, 140, 0.08) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .beauty-texture {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23cd968c' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .dark .beauty-texture {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23cd968c' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
 }
 
-@keyframes holographic {
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes float {
   0%,
   100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-@keyframes scan {
-  0% {
     transform: translateY(0);
   }
-  100% {
-    transform: translateY(100vh);
-  }
-}
-
-@keyframes pulse-glow {
-  0%,
-  100% {
-    opacity: 1;
-  }
   50% {
-    opacity: 0.5;
+    transform: translateY(-10px);
   }
 }

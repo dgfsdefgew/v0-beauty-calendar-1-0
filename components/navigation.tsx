@@ -4,6 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Calendar, Users, Scissors, Package, FileText, Settings, LayoutDashboard, ShoppingCart } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { ThemeToggle } from "./theme-toggle"
 
 const navItems = [
   { title: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
@@ -22,23 +23,23 @@ export function Navigation() {
   const pathname = usePathname()
 
   return (
-    <nav className="w-64 min-h-screen bg-sidebar/95 backdrop-blur-xl border-r border-sidebar-border grid-pattern relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
-      <div className="relative p-4">
+    <nav className="w-64 min-h-screen bg-card/50 backdrop-blur-xl border-r border-border relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-secondary/5 pointer-events-none" />
+
+      <div className="relative p-6">
         <div className="mb-8">
           <div className="flex items-center gap-3 px-2">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center backdrop-blur-sm border border-primary/50 neon-glow relative overflow-hidden">
-              <div className="absolute inset-0 holographic opacity-20" />
-              <Calendar className="w-5 h-5 text-primary relative z-10" />
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
+              <Calendar className="w-5 h-5 text-white" />
             </div>
             <div>
-              <h2 className="font-bold text-foreground tracking-wider">BEAUTY CALENDAR</h2>
-              <p className="text-xs text-primary font-mono">v1.0 // PATFER 3D</p>
+              <h2 className="font-bold text-foreground text-sm">Beauty Calendar</h2>
+              <p className="text-xs text-muted-foreground">by Patfer 3D</p>
             </div>
           </div>
         </div>
 
-        <div className="space-y-1">
+        <div className="space-y-2">
           {navItems.map((item) => {
             const Icon = item.icon
             const isActive = pathname === item.href
@@ -48,40 +49,24 @@ export function Navigation() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-300 relative group overflow-hidden",
+                  "flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 relative group",
                   isActive
-                    ? "bg-primary/20 text-primary font-medium border border-primary/50"
-                    : "text-muted-foreground hover:bg-sidebar-accent hover:text-foreground border border-transparent hover:border-primary/30",
+                    ? "bg-gradient-to-r from-primary/20 to-secondary/20 text-primary font-medium shadow-md"
+                    : "text-muted-foreground hover:bg-muted hover:text-foreground",
                 )}
               >
-                {isActive && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent opacity-50" />
-                )}
-                <div
-                  className={cn(
-                    "relative z-10 transition-transform duration-300 group-hover:scale-110",
-                    isActive && "text-primary",
-                  )}
-                >
-                  <Icon className="w-5 h-5" />
-                </div>
-                <span className="relative z-10 tracking-wide uppercase text-sm font-medium">{item.title}</span>
                 {isActive && <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary rounded-r-full" />}
+                <Icon className={cn("w-5 h-5 transition-transform duration-300", isActive && "scale-110")} />
+                <span className="text-sm font-medium">{item.title}</span>
               </Link>
             )
           })}
         </div>
 
-        <div className="mt-8 pt-8 border-t border-sidebar-border">
-          <div className="space-y-2 text-xs font-mono text-muted-foreground px-2">
-            <div className="flex items-center justify-between">
-              <span>SYSTEM</span>
-              <span className="text-accent">ONLINE</span>
-            </div>
-            <div className="flex items-center justify-between">
-              <span>STATUS</span>
-              <span className="text-primary animate-pulse">ACTIVE</span>
-            </div>
+        <div className="mt-8 pt-8 border-t border-border">
+          <div className="flex items-center justify-between px-2">
+            <span className="text-xs text-muted-foreground font-medium">Appearance</span>
+            <ThemeToggle />
           </div>
         </div>
       </div>
